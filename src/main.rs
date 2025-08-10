@@ -59,7 +59,6 @@ fn main() {
     jpg_buffer.extend_from_slice(marker.as_bytes());
     jpg_buffer.extend_from_slice(seed_phrase.as_bytes());
 
-    // Save the new polyglot file
     let mut output = match File::create("polyglot.jpg") {
         Ok(f) => f,
         Err(_) => {
